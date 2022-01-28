@@ -1,0 +1,50 @@
+event main:
+//this script sorts a small array to demonstrate insertion sort
+
+array int numbers[4]
+numbers at [0] = 3
+numbers at [1] = 4
+numbers at [2] = 2
+numbers at [3] = 5
+
+var int output
+var int iterator
+var int temp
+var int left
+var int right
+
+	print("Before sorting:")
+	print("\n")
+
+	loop (iterator = 0; < 4; 1)
+		output = numbers at [iterator]
+		printval(output)
+		print(" ")
+	endloop
+
+	print("\n")
+
+	loop (iterator = 1; < 4; 1)
+		left = numbers at [iterator]
+		right = numbers at [iterator - 1]
+
+		if (left < right)
+		then
+			temp = numbers at [iterator]
+			numbers at [iterator] = numbers at [iterator - 1]
+			numbers at [iterator - 1] = temp
+			iterator = iterator - 2		
+		endif
+	endloop
+
+	print("\n")
+
+	print("After sorting:")
+	print("\n")
+	loop (iterator = 0; < 4; 1)
+		output = numbers at [iterator]
+		printval(output)
+		print(" ")
+	endloop
+
+endevent
