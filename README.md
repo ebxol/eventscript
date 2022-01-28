@@ -1,0 +1,2 @@
+# eventscript
+Simple command system
