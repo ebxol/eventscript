@@ -3,7 +3,7 @@ Basic procedural interpreted language with simple loops and variables (similar t
 
 There are a few example scripts provided (sorting and summation)
 
-#Example
+# Example
 
 ```
 event main:
